@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv1-af-xC9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kalkulatori i tatimit në pagë-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="Paga_bruto_dhe_neto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b5t-vs-jnE" userLabel="Main Stack View">
+                                <rect key="frame" x="10" y="108" width="394" height="474"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0C-nB-arr">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="95"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="rsw-Ss-5f0">
+                                                <rect key="frame" x="4" y="30.5" width="386" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paga:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uud-6N-RgF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="108" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="shkruaje pagen ne euro" minimumFontSize="17" background="textfield1" disabledBackground="textfield1" translatesAutoresizingMaskIntoConstraints="NO" id="apb-PR-i7g">
+                                                        <rect key="frame" x="206" y="0.0" width="180" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="180" id="hWa-eR-Vc9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="rsw-Ss-5f0" firstAttribute="centerX" secondItem="x0C-nB-arr" secondAttribute="centerX" id="3PK-JC-rCE"/>
+                                            <constraint firstAttribute="trailing" secondItem="rsw-Ss-5f0" secondAttribute="trailing" constant="4" id="HJ1-9m-ltA"/>
+                                            <constraint firstItem="rsw-Ss-5f0" firstAttribute="centerY" secondItem="x0C-nB-arr" secondAttribute="centerY" id="cyw-22-Oqs"/>
+                                            <constraint firstItem="rsw-Ss-5f0" firstAttribute="leading" secondItem="x0C-nB-arr" secondAttribute="leading" constant="4" id="hpS-WC-VS5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FtO-12-XlY">
+                                        <rect key="frame" x="0.0" y="95" width="394" height="94.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="wQ5-DE-fLy">
+                                                <rect key="frame" x="2" y="27" width="390" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lloji i pages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anj-bc-HlS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgM-FK-Jhb">
+                                                        <rect key="frame" x="210" y="0.0" width="180" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="3EC-gL-vbd"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Orr-pP-GaE"/>
+                                                            <constraint firstAttribute="width" constant="180" id="Un6-Ea-7By"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="lhi-IV-hw4"/>
+                                                        </constraints>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wQ5-DE-fLy" firstAttribute="centerY" secondItem="FtO-12-XlY" secondAttribute="centerY" id="Cx5-sc-8Gf"/>
+                                            <constraint firstAttribute="trailing" secondItem="wQ5-DE-fLy" secondAttribute="trailing" constant="2" id="NcU-F4-3tv"/>
+                                            <constraint firstItem="wQ5-DE-fLy" firstAttribute="centerX" secondItem="FtO-12-XlY" secondAttribute="centerX" id="RhA-Rh-e0Q"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUY-Fe-MhI">
+                                        <rect key="frame" x="0.0" y="189.5" width="394" height="95"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7aO-92-93M">
+                                                <rect key="frame" x="2" y="27.5" width="390" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punedhenesi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y81-m8-aPb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cf9-Ut-OHz">
+                                                        <rect key="frame" x="210" y="0.0" width="180" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="180" id="H47-cr-u7a"/>
+                                                            <constraint firstAttribute="height" constant="40" id="cQO-Q6-ZhW"/>
+                                                        </constraints>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7aO-92-93M" firstAttribute="centerX" secondItem="KUY-Fe-MhI" secondAttribute="centerX" id="0yR-eG-15Z"/>
+                                            <constraint firstItem="7aO-92-93M" firstAttribute="leading" secondItem="KUY-Fe-MhI" secondAttribute="leading" priority="100" constant="2" id="51Y-S8-Lsw"/>
+                                            <constraint firstAttribute="trailing" secondItem="7aO-92-93M" secondAttribute="trailing" constant="2" id="dXg-56-9ig"/>
+                                            <constraint firstItem="7aO-92-93M" firstAttribute="centerY" secondItem="KUY-Fe-MhI" secondAttribute="centerY" id="fLH-9r-33I"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxc-Sg-hoJ">
+                                        <rect key="frame" x="0.0" y="284.5" width="394" height="94.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zPV-Ix-L01">
+                                                <rect key="frame" x="4" y="29.5" width="386" height="36"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Kontributi i punetorit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-DV-EfQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="249" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klj-vx-KYS">
+                                                        <rect key="frame" x="259" y="0.0" width="27" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="5" maximumValue="15" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VOz-cc-hNr">
+                                                        <rect key="frame" x="296" y="0.0" width="90" height="36"/>
+                                                        <color key="backgroundColor" red="0.61960784313725492" green="0.77254901960784317" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="O1J-ej-hcO"/>
+                                                            <constraint firstAttribute="height" constant="36" id="iF4-fK-hlg"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="kontributiIPunnetoritPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q10-ER-zdQ"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zPV-Ix-L01" firstAttribute="centerY" secondItem="zxc-Sg-hoJ" secondAttribute="centerY" id="4px-Y7-0p7"/>
+                                            <constraint firstAttribute="trailing" secondItem="zPV-Ix-L01" secondAttribute="trailing" constant="4" id="HQ7-Ms-9OD"/>
+                                            <constraint firstItem="zPV-Ix-L01" firstAttribute="leading" secondItem="zxc-Sg-hoJ" secondAttribute="leading" constant="4" id="kRa-5a-avF"/>
+                                            <constraint firstItem="zPV-Ix-L01" firstAttribute="centerX" secondItem="zxc-Sg-hoJ" secondAttribute="centerX" id="rMl-QH-Ush"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thu-1v-t2m">
+                                        <rect key="frame" x="0.0" y="379" width="394" height="95"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cFS-zf-0Fz">
+                                                <rect key="frame" x="4" y="29.5" width="386" height="36"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Kontributi i punedhenesit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiU-0V-fGv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="249" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYw-Pq-CEG">
+                                                        <rect key="frame" x="259" y="0.0" width="27" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="5" maximumValue="15" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="kWZ-4f-54Z">
+                                                        <rect key="frame" x="296" y="0.0" width="90" height="36"/>
+                                                        <color key="backgroundColor" red="0.61960784310000006" green="0.7725490196" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="5GC-UX-W6I"/>
+                                                            <constraint firstAttribute="width" constant="90" id="ENe-0B-VjS"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="kontributiIPunedhenesitPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="IGg-aG-xih"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cFS-zf-0Fz" secondAttribute="trailing" constant="4" id="1w7-jq-nge"/>
+                                            <constraint firstItem="cFS-zf-0Fz" firstAttribute="centerY" secondItem="thu-1v-t2m" secondAttribute="centerY" id="SVz-5h-Sr0"/>
+                                            <constraint firstItem="cFS-zf-0Fz" firstAttribute="centerX" secondItem="thu-1v-t2m" secondAttribute="centerX" id="gU0-Wj-c4k"/>
+                                            <constraint firstItem="cFS-zf-0Fz" firstAttribute="leading" secondItem="thu-1v-t2m" secondAttribute="leading" constant="4" id="xeb-VI-BCE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaH-Il-H24">
+                                <rect key="frame" x="137" y="782" width="140" height="40"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.69019607843137254" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EsU-Tz-iHM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="l7N-nK-ueA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Kalkuloje">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6A-fJ-hpp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aaH-Il-H24" firstAttribute="top" secondItem="b5t-vs-jnE" secondAttribute="bottom" constant="10" id="7qp-DV-ePs">
+                                <variation key="heightClass=regular" constant="200"/>
+                            </constraint>
+                            <constraint firstItem="aaH-Il-H24" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qU-YN-04a"/>
+                            <constraint firstItem="b5t-vs-jnE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HSz-sV-ReU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aaH-Il-H24" secondAttribute="bottom" constant="40" id="X1M-Qr-ztC"/>
+                            <constraint firstItem="b5t-vs-jnE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hvv-ze-VYF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5t-vs-jnE" secondAttribute="trailing" constant="10" id="mB6-EB-VW1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kalkulatori i tatimit në pagë" id="9Lg-77-tas">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="Cqa-RQ-AWg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="pbN-cO-DxD" kind="show" id="FFj-Yd-YEG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="kalkuloje" destination="aaH-Il-H24" id="m68-0u-Vyr"/>
+                        <outlet property="kontPunedheStepper" destination="kWZ-4f-54Z" id="iBe-r6-FlL"/>
+                        <outlet property="kontPunetStepper" destination="VOz-cc-hNr" id="kcI-eh-B3r"/>
+                        <outlet property="kontributiIPunedhenesit" destination="kYw-Pq-CEG" id="NY3-63-Akh"/>
+                        <outlet property="kontributiIpunetorit" destination="Klj-vx-KYS" id="H2h-dW-pGs"/>
+                        <outlet property="llojiIPagesPicker" destination="UgM-FK-Jhb" id="jVR-8O-G0N"/>
+                        <outlet property="llojiIPunedhenesitPicker" destination="Cf9-Ut-OHz" id="0wA-s6-Yap"/>
+                        <outlet property="pagaTextfield" destination="apb-PR-i7g" id="M9V-4L-dh6"/>
+                        <segue destination="q04-02-AyY" kind="show" identifier="result" id="wnP-Wd-0jt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923.1884057971015" y="-100.44642857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XeL-ga-XaK">
+            <objects>
+                <viewController id="pbN-cO-DxD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sos-jh-7aF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JYN-UL-79a">
+                                <rect key="frame" x="10" y="98" width="394" height="631"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informata per termet e perdurura" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyK-8P-y0J">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nUE-PY-F24"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe7-HF-g5V">
+                                        <rect key="frame" x="0.0" y="40" width="394" height="54"/>
+                                        <string key="text"> - Punëdhënës është çdo person i cili u mundëson punëmarrësve inkuadrimin në punë konkrete, dhe i paguan ata për shërbimet e tyre</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8t-0z-Q0Q">
+                                        <rect key="frame" x="0.0" y="94" width="394" height="50.5"/>
+                                        <string key="text"> - Punëtori është person fizik i cili themelon marrëdhënie pune me një punëdhënës dhe njëkohësisht merr shpërblim mujor të konvertuar në të holla. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaO-8I-0bv">
+                                        <rect key="frame" x="0.0" y="144.5" width="394" height="67"/>
+                                        <string key="text"> - Punëdhënësi primar është punëdhënësi kryesor i një punëmarrësi. Kur një punëtor është i angazhuar në marrëdhënie të rregullta të punës në një kompani të caktuar, e deklaron atë si punëdhënësin e tij parësor</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dph-vd-Twv">
+                                        <rect key="frame" x="0.0" y="211.5" width="394" height="50.5"/>
+                                        <string key="text"> - Punëdhënësi dytësor/i jashtëm i një punëmarrësi (Kur një punëtor angazhohet përkohësisht në një vend pune, apo jo në marrëdhënie të rregullta të punës).</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXV-uQ-eEg">
+                                        <rect key="frame" x="0.0" y="262" width="394" height="50.5"/>
+                                        <string key="text"> - Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17Q-wh-bY9">
+                                        <rect key="frame" x="0.0" y="312.5" width="394" height="67"/>
+                                        <string key="text"> - Paga bruto nënkupton shumën totale të parave, para zbritjes së taksave. Tek paga bruto hyjnë të gjitha shpenzimet apo kontributet që kompania paguan për punëmarrësin e vet.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C01-au-ky6">
+                                        <rect key="frame" x="0.0" y="379.5" width="394" height="67"/>
+                                        <string key="text"> - Paga neto është pagesa e pastër e cila transferohet tek një punëmarrës. Kjo nënkupton shumën e parave që mbeten pasi të gjitha zbritjet janë hequr për tatime apo kontribute nga paga e një personi.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" - Kontributi i Punedhenesit  eshte shuma e parave që një punëdhënës paguan për kontribute pensionale, për punëtorët e tij." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eys-iL-Uvy">
+                                        <rect key="frame" x="0.0" y="446.5" width="394" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" - Kontributi i Punetorit eshte shuma e parave që hiqen nga paga e një punëmarrësi për kontribute pensionale." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEV-cs-3Pv">
+                                        <rect key="frame" x="0.0" y="497" width="394" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" - Paga qe tatohet eshte shuma që ndalet nga paga bruto, në emër të taksës që vendos shteti." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP9-vS-Yja">
+                                        <rect key="frame" x="0.0" y="530.5" width="394" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" - Paga qe tatohet eshte shuma që ndalet nga paga bruto, në emër të taksës që vendos shteti." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glO-c3-NjS">
+                                        <rect key="frame" x="0.0" y="564" width="394" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Gjithsej tatim eshte shuma totale e parave që shkojnë për tatim." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRH-3v-Ohv">
+                                        <rect key="frame" x="0.0" y="597.5" width="394" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <string key="userLabel">- Paga është shpërblim mujor të cilin e paguan punëdhënësi drejt punëmarresit, pas përfundimit të obligimeve që rrjedhin nga kontrata e punës</string>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q47-Ii-Z9n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JYN-UL-79a" firstAttribute="leading" secondItem="Q47-Ii-Z9n" secondAttribute="leading" constant="10" id="9Kj-Yw-hYL"/>
+                            <constraint firstItem="JYN-UL-79a" firstAttribute="top" secondItem="Q47-Ii-Z9n" secondAttribute="top" constant="10" id="TbS-UA-EXH"/>
+                            <constraint firstItem="Q47-Ii-Z9n" firstAttribute="trailing" secondItem="JYN-UL-79a" secondAttribute="trailing" constant="10" id="Ymt-mK-cDt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Awe-ed-ZpK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eq3-Nf-A24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2691.5887850467288" y="-804.10367170626353"/>
+        </scene>
+        <!--Rezultati-->
+        <scene sceneID="Onl-Kv-jQl">
+            <objects>
+                <viewController id="q04-02-AyY" customClass="ResultViewController" customModule="Paga_bruto_dhe_neto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EXp-PK-SmT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vNE-zN-YPw">
+                                <rect key="frame" x="10" y="118" width="394" height="397"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="g0M-rS-T5v">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Paga Bruto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oke-06-nX0">
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="1,000.00€ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-Qy-q4A">
+                                                <rect key="frame" x="296" y="0.0" width="98" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="pYh-mV-XeS">
+                                        <rect key="frame" x="0.0" y="43" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Kontributi i punetorit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-Br-NZt">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-uM-Gba">
+                                                <rect key="frame" x="360" y="0.0" width="34" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="AFU-xg-Wvw">
+                                        <rect key="frame" x="0.0" y="83.5" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Kontributi i punedhenesit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moy-cS-zPq">
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElV-2z-tRL">
+                                                <rect key="frame" x="360" y="0.0" width="34" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-Y9-F3S">
+                                        <rect key="frame" x="0.0" y="124" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Paga qe tatohet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I48-T1-wLp">
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="950€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-gu-aSg">
+                                                <rect key="frame" x="349" y="0.0" width="45" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="93" translatesAutoresizingMaskIntoConstraints="NO" id="EcB-bD-xma">
+                                        <rect key="frame" x="0.0" y="164.5" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Paga prej 0 - 80€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0G-E4-pHI">
+                                                <rect key="frame" x="0.0" y="0.0" width="278" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDw-fg-6Yt">
+                                                <rect key="frame" x="371" y="0.0" width="23" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="dvu-1k-rwe">
+                                        <rect key="frame" x="0.0" y="205" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Paga prej 80 - 250€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYO-37-ekZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.80€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4X-1e-TRm">
+                                                <rect key="frame" x="344.5" y="0.0" width="49.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="hPj-H0-znm">
+                                        <rect key="frame" x="0.0" y="245.5" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Paga prej 250 - 450€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CG-J3-FAf">
+                                                <rect key="frame" x="0.0" y="0.0" width="273.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16.00€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWW-2g-kHr">
+                                                <rect key="frame" x="336.5" y="0.0" width="57.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="CKT-L2-enh">
+                                        <rect key="frame" x="0.0" y="286" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Paga mbi 450€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrJ-EX-yzG">
+                                                <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63.64€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoP-EH-y1t">
+                                                <rect key="frame" x="334" y="0.0" width="60" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="9qf-2u-bfW">
+                                        <rect key="frame" x="0.0" y="326.5" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Gjithsej tatimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeD-Zt-uVd">
+                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="86.44€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EX-CS-HHd">
+                                                <rect key="frame" x="332.5" y="0.0" width="61.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="ZZo-cQ-qi9">
+                                        <rect key="frame" x="0.0" y="367" width="394" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Paga Neto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-A7-vqp">
+                                                <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="877.20€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZl-zJ-XiJ">
+                                                <rect key="frame" x="326" y="0.0" width="68" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="k3X-qk-giJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" spacing="6"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaD-vF-0Rb" userLabel="Bottom View">
+                                <rect key="frame" x="0.0" y="515" width="414" height="347"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SoM-Ox-rkX"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OaD-vF-0Rb" firstAttribute="trailing" secondItem="SoM-Ox-rkX" secondAttribute="trailing" id="3eG-gX-2Vj"/>
+                            <constraint firstItem="vNE-zN-YPw" firstAttribute="top" secondItem="SoM-Ox-rkX" secondAttribute="top" constant="30" id="6x3-Zi-027"/>
+                            <constraint firstItem="OaD-vF-0Rb" firstAttribute="leading" secondItem="SoM-Ox-rkX" secondAttribute="leading" id="DDg-mX-Yng"/>
+                            <constraint firstItem="vNE-zN-YPw" firstAttribute="leading" secondItem="SoM-Ox-rkX" secondAttribute="leading" constant="10" id="gUP-WR-4bS"/>
+                            <constraint firstItem="OaD-vF-0Rb" firstAttribute="top" secondItem="vNE-zN-YPw" secondAttribute="bottom" id="h1a-rd-zem"/>
+                            <constraint firstItem="OaD-vF-0Rb" firstAttribute="bottom" secondItem="SoM-Ox-rkX" secondAttribute="bottom" id="jQN-Xh-m48"/>
+                            <constraint firstItem="SoM-Ox-rkX" firstAttribute="trailing" secondItem="vNE-zN-YPw" secondAttribute="trailing" constant="10" id="jTa-gJ-9xz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rezultati" id="Uyx-7z-zRQ">
+                        <barButtonItem key="backBarButtonItem" title="Kthehu" id="h6U-xV-7Yj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gjithsejTatimVlera" destination="5EX-CS-HHd" id="Ohn-bS-8fI"/>
+                        <outlet property="kontributiIPunedhenesitVlera" destination="ElV-2z-tRL" id="Pov-iy-1QH"/>
+                        <outlet property="kontributiIPunetoritVlera" destination="1fD-uM-Gba" id="9mu-XH-QLq"/>
+                        <outlet property="pagaBrutoLabel" destination="Oke-06-nX0" id="u9K-IA-IyW"/>
+                        <outlet property="pagaBrutoNetoVlera" destination="9IT-Qy-q4A" id="XeH-2p-Guc"/>
+                        <outlet property="pagaMbi450Vlera" destination="EoP-EH-y1t" id="1Gk-Hb-DhK"/>
+                        <outlet property="pagaNetoBrutoVlera" destination="UZl-zJ-XiJ" id="cVw-Uz-6Gm"/>
+                        <outlet property="pagaNetoLabel" destination="e2U-A7-vqp" id="AFo-hz-pKV"/>
+                        <outlet property="pagaPrej250Deri450Vlera" destination="NWW-2g-kHr" id="ODU-DI-px3"/>
+                        <outlet property="pagaPrej80Deri250Vlera" destination="m4X-1e-TRm" id="iti-1P-DdS"/>
+                        <outlet property="pagaQeTatohetVlera" destination="s9u-gu-aSg" id="ABD-4n-A7d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdr-Pr-lZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3318.840579710145" y="-181.47321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SKg-Dq-MxZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gv1-af-xC9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" alpha="0.80000000000000004" contentMode="scaleToFill" id="Sw9-Th-BoA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.20000000000000001" green="0.69019607839999997" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" systemColor="systemPinkColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8zx-eB-TLr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGS-gV-mfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="-137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="textfield1" width="298" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
