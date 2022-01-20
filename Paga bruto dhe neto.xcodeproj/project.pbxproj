@@ -14,8 +14,6 @@
 		5E022B6426FCF59900D2CE7A /* Paga_bruto_dhe_neto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E022B6226FCF59900D2CE7A /* Paga_bruto_dhe_neto.xcdatamodeld */; };
 		5E022B6626FCF59A00D2CE7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E022B6526FCF59A00D2CE7A /* Assets.xcassets */; };
 		5E022B6926FCF59A00D2CE7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E022B6726FCF59A00D2CE7A /* LaunchScreen.storyboard */; };
-		5E022B7426FCF59A00D2CE7A /* Paga_bruto_dhe_netoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E022B7326FCF59A00D2CE7A /* Paga_bruto_dhe_netoTests.swift */; };
-		5E022B7F26FCF59A00D2CE7A /* Paga_bruto_dhe_netoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E022B7E26FCF59A00D2CE7A /* Paga_bruto_dhe_netoUITests.swift */; };
 		5E022B9126FE5FAE00D2CE7A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E022B9026FE5FAE00D2CE7A /* ResultViewController.swift */; };
 		5EEBBD982703710A00538B34 /* TaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEBBD972703710A00538B34 /* TaxCalculator.swift */; };
 /* End PBXBuildFile section */
@@ -48,11 +46,7 @@
 		5E022B6826FCF59A00D2CE7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E022B6A26FCF59A00D2CE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E022B6F26FCF59A00D2CE7A /* Paga bruto dhe netoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paga bruto dhe netoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E022B7326FCF59A00D2CE7A /* Paga_bruto_dhe_netoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paga_bruto_dhe_netoTests.swift; sourceTree = "<group>"; };
-		5E022B7526FCF59A00D2CE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E022B7A26FCF59A00D2CE7A /* Paga bruto dhe netoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paga bruto dhe netoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E022B7E26FCF59A00D2CE7A /* Paga_bruto_dhe_netoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paga_bruto_dhe_netoUITests.swift; sourceTree = "<group>"; };
-		5E022B8026FCF59A00D2CE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E022B9026FE5FAE00D2CE7A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		5EEBBD972703710A00538B34 /* TaxCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				5E022B5826FCF59900D2CE7A /* Paga bruto dhe neto */,
-				5E022B7226FCF59A00D2CE7A /* Paga bruto dhe netoTests */,
-				5E022B7D26FCF59A00D2CE7A /* Paga bruto dhe netoUITests */,
 				5E022B5726FCF59900D2CE7A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,24 +108,6 @@
 				5E022B6226FCF59900D2CE7A /* Paga_bruto_dhe_neto.xcdatamodeld */,
 			);
 			path = "Paga bruto dhe neto";
-			sourceTree = "<group>";
-		};
-		5E022B7226FCF59A00D2CE7A /* Paga bruto dhe netoTests */ = {
-			isa = PBXGroup;
-			children = (
-				5E022B7326FCF59A00D2CE7A /* Paga_bruto_dhe_netoTests.swift */,
-				5E022B7526FCF59A00D2CE7A /* Info.plist */,
-			);
-			path = "Paga bruto dhe netoTests";
-			sourceTree = "<group>";
-		};
-		5E022B7D26FCF59A00D2CE7A /* Paga bruto dhe netoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5E022B7E26FCF59A00D2CE7A /* Paga_bruto_dhe_netoUITests.swift */,
-				5E022B8026FCF59A00D2CE7A /* Info.plist */,
-			);
-			path = "Paga bruto dhe netoUITests";
 			sourceTree = "<group>";
 		};
 		5E05ABA327998633007CAED8 /* Model */ = {
@@ -304,7 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E022B7426FCF59A00D2CE7A /* Paga_bruto_dhe_netoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E022B7F26FCF59A00D2CE7A /* Paga_bruto_dhe_netoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
