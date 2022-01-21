@@ -35,7 +35,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="shkruaje pagen ne euro" minimumFontSize="17" background="textfield1" disabledBackground="textfield1" translatesAutoresizingMaskIntoConstraints="NO" id="apb-PR-i7g">
                                                         <rect key="frame" x="206" y="0.0" width="180" height="34"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="180" id="hWa-eR-Vc9"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="hWa-eR-Vc9"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>

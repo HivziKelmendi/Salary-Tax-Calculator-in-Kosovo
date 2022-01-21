@@ -26,7 +26,6 @@ struct TaxCalculator {
     mutating func calculateAllTaxes(pagaNumber: Double, llojiIPageeses: String, llojiIPunes: String, kontrIPunetoritNumb: Double, kontrIPunedhnesitNum: Double) {
         if llojiIPageeses == "Bruto" {
             pagaBruto = pagaNumber
-            print(pagaBruto)
             pagaFillestareLabel = "Paga Bruto"
             pagaPerfundimtareLabel = "Paga Neto"
             kontributiIPunetoritPerTrust = pagaNumber * kontrIPunetoritNumb * 0.01
@@ -39,7 +38,6 @@ struct TaxCalculator {
                     pagaPrej80Deri250 = 6.80
                     pagaPrej250Deri450 = 16.00
                     pagaMbi450 = (pagaQeTatohet - 450)*0.1
-//                    print(pagaMbi450)
                     gjithsejTatim = pagaMbi450 + 22.8
                     pagaNeto = pagaQeTatohet - gjithsejTatim
                 }
@@ -70,7 +68,6 @@ struct TaxCalculator {
                 }
                 
             } else {
-                
                 pagaPrej0Deri80 = 0.00
                 pagaPrej80Deri250 = 0.00
                 pagaPrej250Deri450 = 0.00
@@ -79,14 +76,11 @@ struct TaxCalculator {
                 pagaNeto = pagaQeTatohet - gjithsejTatim
             }
   
-            
-            
         } else   {
             pagaFillestareLabel = "Paga Neto"
             pagaPerfundimtareLabel = "Paga Bruto"
             if llojiIPunes == "Primar" {
                 pagaBruto = pagaNumber
-                
                 pagaNeto = (10/9 * pagaNumber - 222/9)/(1 - kontrIPunetoritNumb*0.01)
                 let pagaBrutoRound = round(pagaNeto*100)/100.0
                 kontributiIPunetoritPerTrust = pagaBrutoRound * kontrIPunetoritNumb * 0.01
@@ -98,7 +92,6 @@ struct TaxCalculator {
                     pagaPrej250Deri450 = 16.00
                     pagaMbi450 = (pagaQeTatohet - 450)*0.1
                     gjithsejTatim = pagaMbi450 + 22.8
-//                    pagaNeto = pagaQeTatohet - gjithsejTatim
                 }
                 
                 else if pagaNumber >= 243.2 {
@@ -114,13 +107,12 @@ struct TaxCalculator {
                     pagaPrej250Deri450 = (pagaQeTatohet - 250)*0.08
                     pagaMbi450 = 0.00
                     gjithsejTatim = pagaPrej250Deri450 + 6.8
-//                    pagaNeto = pagaQeTatohet - gjithsejTatim
                 }
+                
                 else if pagaNumber >= 80 {
                     pagaBruto = pagaNumber
                     pagaNeto = ( pagaNumber/0.96 - 3.2/0.96)/(1 - kontrIPunetoritNumb*0.01)
                     let pagaBrutoRound = round(pagaNeto*100)/100.0
-                    print(pagaBrutoRound)
                     kontributiIPunetoritPerTrust = pagaBrutoRound * kontrIPunetoritNumb * 0.01
                     kontributiIPunedhenesitPerTrust = pagaBrutoRound * kontrIPunedhnesitNum * 0.01
                     pagaQeTatohet = pagaBrutoRound - kontributiIPunetoritPerTrust
@@ -129,8 +121,8 @@ struct TaxCalculator {
                     pagaPrej250Deri450 = 0.00
                     pagaMbi450 = 0.00
                     gjithsejTatim = pagaPrej80Deri250
-//                    pagaNeto = pagaQeTatohet - gjithsejTatim
                 }
+                
                 else if pagaNumber >= 0 {
                     pagaBruto = pagaNumber
                     pagaNeto = pagaNumber/(1 - kontrIPunetoritNumb*0.01)
@@ -162,7 +154,6 @@ struct TaxCalculator {
     }
     
     func getPagaNetoValue() -> String {
-        
         let pagaNetoString = String(format: "%.2f", pagaNeto)
         return pagaNetoString
     }
@@ -193,18 +184,15 @@ struct TaxCalculator {
     
     func GetPagaPrej250Deri450Value() -> String {
         let pagaPrej250Deri450String = String(format: "%.2f", pagaPrej250Deri450)
-//        print(pagaPrej250Deri450String)
         return pagaPrej250Deri450String }
     
    
     func GetPagaMbi450Value() -> String {
         let pagaMbi450ValueString = String(format: "%.2f", pagaMbi450)
-//        print(pagaMbi450ValueString)
         return pagaMbi450ValueString
     }
     func GetGjithsejTatimValue() -> String {
         let gjithsejTatimString = String(format: "%.2f", gjithsejTatim)
-        print(gjithsejTatimString)
         return gjithsejTatimString }
     
     

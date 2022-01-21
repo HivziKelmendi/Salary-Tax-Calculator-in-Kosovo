@@ -75,8 +75,8 @@ class CalculateViewController: UIViewController {
     var llojiIPunes = ""
     var kontrIPunetoritNumb = 5.0
     var kontrIPunedhnesitNum = 5.0
-     let llojiIPages = ["Bruto", "Neto"]
-     let llojiIPunedhenesit = ["Primar", "Sekondar"]
+     let llojiIPages = ["Neto", "Bruto"]
+     let llojiIPunedhenesit = ["Sekondar", "Primar"]
     
     @IBAction func kontributiIPunnetoritPressed(_ sender: UIStepper) {
          let kontributi = (String(format: "%.0f", sender.value))
@@ -146,28 +146,31 @@ extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource 
        return  llojiIPages.count 
        
     }
-   
+
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == llojiIPagesPicker {
-            llojiIPageeses = llojiIPages[row]
-            print(llojiIPageeses)
-            return llojiIPageeses
-           
+         let    llojiIPageeses1 = llojiIPages[row]
+            return llojiIPageeses1
+
         } else {
-            llojiIPunes = llojiIPunedhenesit[row]
-             print(llojiIPunes)
-            return llojiIPunes
+          let  llojiIPunes1 = llojiIPunedhenesit[row]
+            return llojiIPunes1
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == llojiIPagesPicker {
+        if pickerView == llojiIPagesPicker  {
             llojiIPageeses = llojiIPages[row]
             print(llojiIPageeses)
-           
-        } else {
+           }
+        else if pickerView == llojiIPunedhenesitPicker {
             llojiIPunes = llojiIPunedhenesit[row]
-             print(llojiIPunes)
+            print(llojiIPunes)
+        } else {
+            llojiIPageeses = llojiIPages[0]
+            llojiIPunes = llojiIPunedhenesit[0]
+            
         }
     }
 }

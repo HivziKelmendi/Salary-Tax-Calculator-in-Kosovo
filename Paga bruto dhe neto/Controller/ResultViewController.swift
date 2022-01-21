@@ -46,7 +46,6 @@ class ResultViewController: UIViewController {
         pagaPrej250Deri450Vlera.text = "\(pagaPrej250Deri450Result ?? "")€"
         pagaMbi450Vlera.text = "\(pagaMbi450Result ?? "")€"
         gjithsejTatimVlera.text = "\(gjithejTatimResult ?? "")€"
-        
         pagaNetoLabel.text = "\(pagaNetoLabelResult ?? "")"
         pagaBrutoLabel.text = "\(pagaBrutoLabelResult ?? "")"
        }
