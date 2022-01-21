@@ -162,11 +162,9 @@ extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == llojiIPagesPicker  {
             llojiIPageeses = llojiIPages[row]
-            print(llojiIPageeses)
            }
         else if pickerView == llojiIPunedhenesitPicker {
             llojiIPunes = llojiIPunedhenesit[row]
-            print(llojiIPunes)
         } else {
             llojiIPageeses = llojiIPages[0]
             llojiIPunes = llojiIPunedhenesit[0]
